@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 6
+  number: 7
   skip: true  # [cuda_compiler_version in (undefined, "None")]
   missing_dso_whitelist:
     - "*/libcuda.*"
@@ -42,8 +42,6 @@ test:
     - pytest >=2
   source_files:
     - test
-  imports:
-    - pycuda
 
 about:
   home: http://pypi.python.org/pypi/pycuda
