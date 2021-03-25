@@ -6,7 +6,7 @@ import pycuda
 
 # Ensure PyCUDA picks up the correct CUDA_VERSION
 from pycuda import driver
-ver = driver.get_version()
+ver = driver.get_version()[:2]
 cuda_ver = tuple(map(int, os.environ.get("cuda_compiler_version").split(".")))
 if ver != cuda_ver:
     raise ValueError(
@@ -24,6 +24,4 @@ except Exception as e:
 
 # Run PyCUDA's test suite
 import py
-py.test.cmdline.main(["test/test_cumath.py"])
-py.test.cmdline.main(["test/test_driver.py"])
-py.test.cmdline.main(["test/test_gpuarray.py"])
+py.test.cmdline.main(["test"])
