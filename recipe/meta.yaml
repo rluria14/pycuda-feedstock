@@ -39,6 +39,10 @@ requirements:
     - mako
 
 test:
+  requires:
+    - pytest >=2
+  source_files:
+    - test
   imports:
     - pycuda
 
