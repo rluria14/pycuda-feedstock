@@ -1,8 +1,7 @@
 echo CUDA_HOME: %CUDA_HOME%
 echo CUDA_PATH: %CUDA_PATH%
 
-set CUDA_PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v%cuda_compiler_version%
-set CUDA_LIB_PATH=%CUDA_PATH%\lib
+set CUDA_LIB_PATH=%CUDA_PATH%\lib\x64
 
 
 %PYTHON% configure.py --enable-shared
